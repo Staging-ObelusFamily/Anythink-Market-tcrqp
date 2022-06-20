@@ -9,8 +9,10 @@ sys.path.append(str(pathlib.Path(__file__).resolve().parents[3]))
 
 from app.core.config import get_app_settings  # isort:skip
 
+#empty change
+
 SETTINGS = get_app_settings()
-DATABASE_URL = SETTINGS.database_url
+DATABASE_URL = SETTINGS.database_url.replace("postgres://", "postgresql://")
 
 config = context.config
 
